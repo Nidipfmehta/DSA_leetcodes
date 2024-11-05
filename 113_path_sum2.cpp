@@ -20,9 +20,12 @@ public:
         curr.push_back(root->val);
         targetsum -= root->val;
         
-        if (targetsum == 0 && !root->left && !root->right) {
+        if (targetsum == 0 && !root->left && !root->right) 
+        {
             ans.push_back(curr);
-        } else {
+        } 
+        else 
+        {
             find_path(root->left, ans, curr, targetsum);
             find_path(root->right, ans, curr, targetsum);
         }
